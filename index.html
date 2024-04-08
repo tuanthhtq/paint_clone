@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paint</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="main">
+    <div class="container">
+
+        <div class="toolbox">
+            <button class="toolbox-icon" id="undo"></button>
+            <button class="toolbox-icon" id="redo"></button>
+<!--            <button class="toolbox-icon" id="pen"></button>-->
+<!--            <button class="toolbox-icon" id="eraser"></button>-->
+            <button class="toolbox-icon" id="save"></button>
+        </div>
+        <div class="options">
+            <div class="option-item">
+                <p>color</p>
+                <div class="click-color">
+                    <div>
+                        <div id="color"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="option-item">
+                <p>line size</p>
+                <input type="number" class="image-size" id="line-size" min="1" onchange="updateLineSize()" onkeyup="updateLineSize()"> px
+            </div>
+            <div class="option-item" id="image-size">
+                <p>image size</p>
+                <input type="number" class="image-size" id="image-size-x" min="1" onchange="updateImageSize()" onkeyup="updateImageSize()"> x <input type="number" class="image-size" id="image-size-y" min="1" onchange="updateImageSize()" onkeyup="updateImageSize()">
+
+            </div>
+        </div>
+        <div class="draw-area">
+            <canvas class="draw-canvas" id="draw-canvas"></canvas>
+            <span id="indicator"></span>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
